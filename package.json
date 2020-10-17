@@ -43,7 +43,7 @@
     "semi": false,
     "singleQuote": true,
     "trailingComma": "none",
-    "endOfLine": "lf",
+    "endOfLine": "crlf",
     "tabWidth": 2,
     "useTabs": false
   },
