@@ -1,6 +1,7 @@
 {
   "version": "0.1.0",
   "license": "MIT",
+  "description": "Some functional/semantic codes for TypeScript(JavaScript) development.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -30,7 +31,7 @@
     "semi": false,
     "singleQuote": true,
     "trailingComma": "none",
-    "endOfLine": "crlf",
+    "endOfLine": "lf",
     "tabWidth": 2,
     "useTabs": false
   },
