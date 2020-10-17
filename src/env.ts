@@ -9,5 +9,5 @@ export function isServer() {
  * whether current environment is browser runtime?
  */
 export function isBrowser() {
-  return typeof window !== 'undefined'
+  return typeof window !== 'undefined' && typeof document !== 'undefined'
 }
