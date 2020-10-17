@@ -2,7 +2,7 @@
 
 Some functional/semantic codes for TypeScript(JavaScript) development.
 
-![Tests](https://github.com/lbwa/tslang-utils/workflows/Tests/badge.svg) <img alt="npm (tag)" src="https://img.shields.io/npm/v/tslang-utils/latest?style=flat-square"> <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/tslang-utils?style=flat-square">
+![Pipeline](https://github.com/lbwa/tslang-utils/workflows/Pipeline/badge.svg) <img alt="npm (tag)" src="https://img.shields.io/npm/v/tslang-utils/latest?style=flat-square"> <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/tslang-utils?style=flat-square">
 
 <!-- TOC -->
 
