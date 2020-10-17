@@ -1,9 +1,14 @@
 {
+  "name": "tslang-utils",
   "version": "0.1.0",
+  "author": "Liu Bowen <asyncmode@outlook.com>",
   "license": "MIT",
   "description": "Some functional/semantic codes for TypeScript(JavaScript) development.",
+  "module": "dist/tslang-utils.esm.js",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "repository": "git@github.com:lbwa/tslang-utils.git",
+  "private": false,
   "files": [
     "dist",
     "src"
@@ -18,13 +23,20 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "peerDependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "lint-staged",
+      "pre-push": "tsdx lint src"
     }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,json,md}": [
+      "prettier --write"
+    ]
   },
   "prettier": {
     "printWidth": 80,
@@ -35,9 +47,6 @@
     "tabWidth": 2,
     "useTabs": false
   },
-  "name": "tslang-utils",
-  "author": "lbwa",
-  "module": "dist/tslang-utils.esm.js",
   "size-limit": [
     {
       "path": "dist/tslang-utils.cjs.production.min.js",
@@ -51,6 +60,7 @@
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.6.0",
     "husky": "^4.3.0",
+    "lint-staged": "^10.4.2",
     "size-limit": "^4.6.0",
     "tsdx": "^0.14.1",
     "tslib": "^2.0.3",
