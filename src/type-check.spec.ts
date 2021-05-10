@@ -1,4 +1,11 @@
-import { hasOwnProp, isDef, isFunc, isNumber, isString } from './type-check'
+import {
+  hasOwnProp,
+  isDef,
+  isFunc,
+  isNumber,
+  isString,
+  tuple
+} from './type-check'
 
 describe('Type checker', () => {
   it('should return defined', () => {
@@ -46,5 +53,9 @@ describe('Type checker', () => {
     expect(hasOwnProp({ name: 1 }, 'age')).toBeFalsy()
     expect(hasOwnProp({ name: undefined }, 'name')).toBeTruthy()
     expect(hasOwnProp({ name: 'js' }, 'name')).toBeTruthy()
+  })
+
+  it('should return a tuple', () => {
+    expect(tuple(1, '2', true)).toEqual([1, '2', true])
   })
 })

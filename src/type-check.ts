@@ -45,3 +45,13 @@ export function hasOwnProp<V extends object>(
 ): key is keyof V {
   return _hasOwnProp.call(val, key)
 }
+
+/**
+ * make a collection as tuple
+ * ```ts
+ * tuple(1, '2', true) // return type is [number, string, boolean]
+ * ```
+ */
+export function tuple<T extends unknown[]>(...rest: T) {
+  return rest
+}
