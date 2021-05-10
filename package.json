@@ -1,6 +1,6 @@
 {
   "name": "tslang-utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Liu Bowen <asyncmode@outlook.com>",
   "license": "MIT",
   "description": "Some functional/semantic codes for TypeScript(JavaScript) development.",
