@@ -11,3 +11,8 @@ export type First<T extends unknown[]> = T extends [infer F, ...unknown[]]
 export type Last<T extends unknown[]> = T extends [...unknown[], infer F]
   ? F
   : never
+
+/**
+ * infer promise instance value
+ */
+export type PromiseValue<P> = P extends PromiseLike<infer V> ? V : never
