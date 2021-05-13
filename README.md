@@ -18,6 +18,13 @@ Some functional/semantic codes for TypeScript(JavaScript) development.
   - [Env](#env)
     - [isServer](#isserver)
     - [isBrowser](#isbrowser)
+    - [isWin](#iswin)
+    - [isLinux](#islinux)
+    - [isMac](#ismac)
+  - [Types](#types)
+    - [First](#first)
+    - [Last](#last)
+    - [PromiseValue](#promisevalue)
   - [License](#license)
 
 <!-- /TOC -->
@@ -90,7 +97,7 @@ hasOwnProp(a, 'toString') // false
 Whether current JS runtime is in the server([node.js](https://nodejs.org)) environment.
 
 ```ts
-isSever() // true or false
+isSever() // boolean
 ```
 
 ### isBrowser
@@ -98,7 +105,69 @@ isSever() // true or false
 Whether current JS runtime is in the browser environment.
 
 ```ts
-isBrowser() // true or false
+isBrowser() // boolean
+```
+
+### isWin
+
+Whether we are in Windows
+
+```ts
+import { isWin } from 'tslang-utils'
+
+isWin() // boolean
+```
+
+### isLinux
+
+Whether we are in linux
+
+```ts
+import { isLinux } from 'tslang-utils'
+
+isLinux() // boolean
+```
+
+### isMac
+
+Whether we are in mac os
+
+```ts
+import { isMac } from 'tslang-utils'
+
+isMac() // boolean
+```
+
+## Types
+
+### First
+
+get first element type in array
+
+```ts
+import { First } from 'tslang-utils/dist/type'
+
+type FirstElement = First<[1, 2, 3, 4, 5]> // 1
+```
+
+### Last
+
+get last element type in array
+
+```ts
+import { Last } from 'tslang-utils/dist/type'
+
+type LastElement = Last<1, 2, 3, 4, 5> // 5
+```
+
+### PromiseValue
+
+infer fulfilled promise instance value
+
+```ts
+import { PromiseValue } from 'tslang-utils/dist/type'
+
+type promiseValue = PromiseValue<Promise<boolean>> // boolean
 ```
 
 ## License
